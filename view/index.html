@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" /> 
+  <title>ﾏﾀﾃｲﾘｼﾒｼﾀｱｱｱｱｱｱ</title>
+  <link type="text/css" rel="stylesheet" href="stylesheets/index.css" />
+</head>
+
+<body>
+
+<div id="container">
+    <header>
+    <h1>#まいにち定理証明</h1>
+    <p>#まいにち定理証明、してますか？(まいにち定理証明をして証明した定理の数をつぶやくだけのアプリケーションです)</p>
+    </header>
+
+    <a href="{{ url }}">{{ url_linktext }}</a>
+    
+    {% if login %}
+        <form action="/tweet" method="post">
+          <div><textarea name="content" rows="3" cols="60">{{ message }}</textarea></div>
+          <div><input type="submit" value="tweet"></div>
+        </form>
+    {% endif %}
+    
+    <section>
+    <h2>更新履歴</h2>
+    <p>2013/1/28 更新履歴を追加、キャンセルボタンで戻ったときの処理を修正</p>
+    </section>
+    
+    <footer>
+    <p>隠し機能が欲しいとかもっとアレな感じにして欲しいとかバグとかあったら<a href="http://twitter.com/myuon_myon" target="_blank">@myuon_myon</a>に投げるといいと思いますよ！</p>
+    </footer>
+
+</div>
+<!-- /container -->
+
+</body>
+</html>
